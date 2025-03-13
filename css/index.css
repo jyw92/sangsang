@@ -1,3 +1,76 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css") layer(Reset);
+@layer Typography {
+  :is(*, *::before, *::after) {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1rem;
+    color: #222;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.header {
+  width: 160rem;
+  margin-inline: auto;
+}
+
+#logo a {
+  display: block;
+  width: 15.7rem;
+  height: 4.2rem;
+}
+#logo a img {
+  max-width: 100%;
+}
+
+.familysite {
+  display: flex;
+  gap: 2.4rem;
+}
+.familysite a {
+  font-size: 5.2rem;
+  font-weight: 800;
+}
+.familysite li:nth-child(1) a:hover {
+  transition: 0.3s;
+  color: orange;
+}
+.familysite li:nth-child(2) a:hover {
+  transition: 0.3s;
+  color: tomato;
+}
+.familysite li:nth-child(3) a:hover {
+  transition: 0.3s;
+  color: violet;
+}
+.familysite li:nth-child(4) a:hover {
+  transition: 0.3s;
+  color: skyblue;
+}
+.familysite li:nth-child(5) a:hover {
+  transition: 0.3s;
+  color: silver;
+}
 
 /*# sourceMappingURL=index.css.map */

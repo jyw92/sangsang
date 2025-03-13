@@ -1,0 +1,25 @@
+@use "sass:list";
+
+.familysite {
+  $colors: orange, tomato, violet, skyblue, silver;
+
+  display: flex;
+  gap: 2.4rem;
+  a {
+    font-size: 5.2rem;
+    font-weight: 800;
+  }
+
+  li {
+    @each $color in $colors {
+      $index: list.index($colors, $color);
+      @debug $index;
+      &:nth-child(#{$index}) {
+        a:hover {
+          transition: 0.3s;
+          color: $color;
+        }
+      }
+    }
+  }
+}
