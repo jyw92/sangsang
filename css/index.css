@@ -30,7 +30,21 @@ a {
   white-space: nowrap;
 }
 
-.header {
+#header {
+  width: 160rem;
+  margin: 10rem auto auto;
+}
+
+.utility {
+  position: absolute;
+  inset: 0 0 auto;
+  background-color: #000;
+  padding-block: 2rem;
+}
+.utility > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
   width: 160rem;
   margin-inline: auto;
 }
@@ -71,6 +85,36 @@ a {
 .familysite li:nth-child(5) a:hover {
   transition: 0.3s;
   color: silver;
+}
+
+a[class^=btn-] {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  gap: 0.8rem;
+}
+a[class^=btn-]::before {
+  content: "";
+  width: 2.4rem;
+  aspect-ratio: 1;
+}
+.utility a[class^=btn-] {
+  color: #fff;
+}
+
+a[class^=btn-archive]::before {
+  background-image: url("/images/ico_archive.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+a[class^=btn-calendar]::before {
+  background-image: url("/images/ico_calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=index.css.map */

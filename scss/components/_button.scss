@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+a[class^="btn-"] {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  gap: 0.8rem;
+  &::before {
+    content: "";
+    width: 2.4rem;
+    aspect-ratio: 1;
+  }
+  .utility & {
+    color: #fff;
+  }
+}
+// 버튼 유형별 아이콘 매칭
+$btn-icons: (
+  "btn-archive": "ico_archive.svg",
+  "btn-calendar": "ico_calendar.svg",
+);
+
+@each $class, $icon in $btn-icons {
+  a[class^="#{$class}"]::before {
+    // background-image: url($icon);
+    @include background($icon, center, null, "size", contain);
+  }
+}
